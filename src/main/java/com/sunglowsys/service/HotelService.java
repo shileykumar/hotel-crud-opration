@@ -3,16 +3,17 @@ package com.sunglowsys.service;
 import com.sunglowsys.domain.Hotel;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface HotelService {
 
     Hotel save(Hotel hotel);
 
-    Hotel update(Hotel hotel, Integer id);
+    Hotel update(Hotel hotel);
 
     List<Hotel> findAll();
 
-    Hotel findById(Integer id);
+    Optional<Hotel> findById(Long id);
 
-    void delete(Integer id);
+    void delete(Long id);
 }
