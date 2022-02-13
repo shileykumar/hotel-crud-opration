@@ -46,20 +46,26 @@ public class HotelResource {
     public ResponseEntity<List<Hotel>> getAllHotels() {
         log.debug("REST request to get a List of Hotels");
         List<Hotel> result = hotelService.findAll();
-        return ResponseEntity.ok().body(result);
+        return ResponseEntity
+                .ok()
+                .body(result);
     }
 
     @GetMapping("/hotels/{id}")
     public ResponseEntity<Hotel> getHotel(@PathVariable Long id) {
         log.debug("REST request to get Hotel : {}", id);
         Optional<Hotel> result = hotelService.findById(id);
-        return ResponseEntity.ok().body(result.get());
+        return ResponseEntity
+                .ok()
+                .body(result.get());
     }
 
     @DeleteMapping("/hotels/{id}")
     public ResponseEntity<Void> deleteHotel(@PathVariable Long id) {
         log.debug("REST request to delete Hotel : {}", id);
         hotelService.delete(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity
+                .ok()
+                .build();
     }
 }

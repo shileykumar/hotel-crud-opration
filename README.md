@@ -1,7 +1,7 @@
 # hotel-crud-opration
-Steps to create project---
+### Steps to create project---
 
-create project using spring initializr(url=start.spring.io),
+- create project using spring initializr(url=start.spring.io),
 
 select maven,
 
@@ -13,7 +13,7 @@ project metadata(
     group(com.sunglowsys)
     artifact(hotel-crud-opreation)
     package name(com.sunglowsys)
-  ),
+  )
   
  select packaging(jar),
  
