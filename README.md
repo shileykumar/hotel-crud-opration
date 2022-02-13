@@ -1,63 +1,64 @@
 # hotel-crud-opration
 ### Steps to create project---
 
-- create project using spring initializr(url=start.spring.io),
+- create project using spring initializr([url](https://start.spring.io/)),
 
-select maven,
+- select maven,
 
-select spring boot version,
+- select spring boot version,
 
-select java version,
+- select java version,
 
-project metadata(
-    group(com.sunglowsys)
-    artifact(hotel-crud-opreation)
+- project metadata(
+    group(com.sunglowsys),
+    artifact(hotel-crud-operation),
     package name(com.sunglowsys)
   )
   
- select packaging(jar),
+- select packaging(jar),
  
-add dependency(spring web, spring data jpa, mysql driver),
+- add dependency(spring web, spring data jpa, mysql driver),
 
-Generate jar file,
+- Generate jar file,
 
-Extract the generated file,
+- Extract the generated file,
 
-open intelliJ IDEA(or any IDEA),
+- open intelliJ IDEA(or any IDEA),
 
-load the project ,
+- load the project ,
 
-create packages(
+- create packages(
    domain,
    repository,
    service,
    rest
  ),
  
- inside domain package create Hotel domain class and use @Entity annotation on this class,
+- inside domain package create Hotel domain class and use @Entity annotation on this class,
  
- in Hotel class define all the required properties of Hotel,
+- in Hotel class define all the required properties of Hotel,
  
- inside repository package create HotelRepository interface extending JpaRepository and use @Repository annotation on this interface ,
+- inside repository package create HotelRepository interface extending JpaRepository and use @Repository annotation on this interface ,
  
- inside service package create HotelService interface,
+- inside service package create HotelService interface,
  
- in HotelService interface create method(
-    save();
-    update();
-    findAll();
-    findById();
-    delete();
-  ),
+- in HotelService interface create method
+```
+   save();
+   update();
+   findAll();
+   findById();
+   delete();
+```
   
-  inside service package create HotelServiceImpl class implements HotelService and use @Service annotation on this class,
+- inside service package create HotelServiceImpl class implements HotelService and use @Service annotation on this class,
   
-  in HotelServiceImpl class implements all the methods of HotelService interface,
+- in HotelServiceImpl class implements all the methods of HotelService interface,
   
-  Inside rest HotelResource class and use @RestController annotation on this class,
+- Inside rest HotelResource class and use @RestController annotation on this class,
   
-  in this class create all the endPoints(methods)-
-      
+- in this class create all the endPoints(methods)-
+``` 
       @PostMapping()
       createHotel(){}
       
@@ -72,3 +73,4 @@ create packages(
       
       @DeleteMapping()
       deleteHotel(){}
+```
